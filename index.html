@@ -100,7 +100,32 @@ San3ti.ma كيساعدك تلقى الحرفي المناسب بسرعة.</p>
 <span>📍 طنجة</span>
 <span>📍 مراكش</span>
 </section>
+<section style="background:white;padding:40px 20px;text-align:center;">
+<h2 style="font-size:34px;margin-bottom:20px;">اطلب خدمة الآن</h2>
 
+<input id="name" placeholder="الاسم" style="width:90%;padding:15px;margin:8px;border-radius:10px;border:1px solid #ccc;font-size:18px;">
+<input id="city" placeholder="المدينة" style="width:90%;padding:15px;margin:8px;border-radius:10px;border:1px solid #ccc;font-size:18px;">
+<input id="service" placeholder="نوع الخدمة: سباك، كهربائي..." style="width:90%;padding:15px;margin:8px;border-radius:10px;border:1px solid #ccc;font-size:18px;">
+
+<button onclick="sendWhatsApp()" style="background:#22c55e;color:white;padding:15px 30px;border:none;border-radius:12px;font-size:22px;margin-top:12px;">
+إرسال الطلب عبر واتساب
+</button>
+</section>
+
+<script>
+function sendWhatsApp(){
+  var name = document.getElementById("name").value;
+  var city = document.getElementById("city").value;
+  var service = document.getElementById("service").value;
+
+  var message = "السلام عليكم، بغيت نطلب خدمة:%0A"
+  + "الاسم: " + name + "%0A"
+  + "المدينة: " + city + "%0A"
+  + "الخدمة: " + service;
+
+  window.location.href = "https://wa.me/393333333333?text=" + message;
+}
+</script>
 <section class="join">
 <h2>واش أنت حرفي؟</h2>
 <p>سجل معنا باش يلقاو الزبناء خدمتك بسهولة فمدينتك.</p>
